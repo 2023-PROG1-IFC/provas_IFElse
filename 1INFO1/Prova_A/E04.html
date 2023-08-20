@@ -10,9 +10,20 @@
     */
     
     //Entrada
+const horas= Number(prompt('informe a quantidade de horas que o evento durou'))
+const auxilio = parseInt(prompt('informe a quantidade de pessoas que ajudou a organizar o evento'))
+const calculo = 300 * horas + auxilio * 100
 
 
     //Processamento
+if(calculo >= 1500 && calculo < 2000){
+    calculo = 300 * (horas-2) + auxilio * 100
+    alert(`o novo valor do evento é de R$ ${calculo}`)
+}
+else if(calculo >= 2000){
+    calculo = 300 * (horas-2) + (auxilio-2) * 100
+    alert(`o novo valor do evento é de R$ ${calculo}`)
+}
 
 
     //Saída

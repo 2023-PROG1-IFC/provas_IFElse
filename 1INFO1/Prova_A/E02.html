@@ -11,7 +11,44 @@
     */
     
     //Entrada
+const salarioL= Number(prompt('informe o seu salario liquido'))
+const auxilio= prompt('deseja receber auxilio transporte n-não s-sim')
+let calculos = 0
 
+if(salarioL <= 2000 && auxilio == 'n'){
+    alert('voce não recebera descontos')
+}
+else if(salarioL <= 2000 && auxilio == 's'){
+    calculos = salarioL - salarioL * 0.06
+    alert(`voce teve um desconto de 6% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 2000 && salarioL < 3500 && auxilio == 'n'){
+    calculos = salarioL - salarioL * 0.10
+    alert(`voce teve um desconto de 10% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 2000 && salarioL < 3500 && auxilio == 's'){
+    calculos = salarioL - salarioL * 0.16
+    alert(`voce teve um desconto de 16% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 3500 && salarioL < 6000 && auxilio == 'n'){
+    calculos = salarioL - salarioL * 0.20
+    alert(`voce teve um desconto de 20% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 3500 && salarioL < 6000 && auxilio == 's'){
+    calculos = salarioL - salarioL * 0.26
+    alert(`voce teve um desconto de 26% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 6000 && auxilio == 'n'){
+    calculos = salarioL - salarioL * 0.30
+    alert(`voce teve um desconto de 30% seu novo salario é de R$ ${calculos}`)
+}
+else if(salarioL >= 6000 && auxilio == 's'){
+    calculos = salarioL - salarioL * 0.36
+    alert(`voce teve um desconto de 36% seu novo salario é de R$ ${calculos}`)
+}
+else{
+    alert('valor invalido')
+}
 
     //Processamento
 

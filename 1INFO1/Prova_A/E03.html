@@ -7,10 +7,16 @@
     */
     
     //Entrada
-
-
+const refeicoesD= Number(prompt('informe quantas refeições gasta diariamente'))
+const diassemanas= parseInt(prompt('informe quantas vezes na semana voce faz refeições'))
+const calculo= refeicoesD*diassemanas * 4
     //Processamento
-
+if(calculo> 500){
+    alert('custo de alimentação esta dentro do esperado')
+}
+else{
+    alert('voce está gastando muito e precisa rever os seus gastos')
+}
 
     //Saída
 
