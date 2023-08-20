@@ -11,6 +11,51 @@
     */
     
     //Entrada
+    const veiculo= Number(prompt('informe o valor do veiculo'))
+const entrada = Number(prompt('informe o valor de entrada'))
+const parcela= parseInt(prompt('informe quantas parcelas'))
+let valor= 0
+
+if(parcela< 12){
+    valor = (veiculo - entrada)/parcela
+    alert(`o valor de cada percela é de R$ ${valor}`)
+    if(valor> 1000){
+        const pergunta= prompt('deseja aumentar o numero de parcela(s-não n-não)')
+        if(pergunta == 's'){
+            const pergunta= Number(prompt('qual a nova quantidade que deseja adicionar'))
+            valor = (veiculo - entrada)/(parcela+pergunta)
+            alert(`o novo valor de cada parcela é de R$ ${valor}`)
+        }else if(pergunta == 'n'){
+            alert(`o valor da parcela continua sendo R$ ${valor}`)
+        }
+        else{
+            alert('valor invalido')
+        }
+    }
+    else{
+        alert(`o valor foi menor que R$ 1000 então não havera aumentos`)
+    }
+}
+else if(parcela >= 12){
+    valor = ((veiculo - entrada)/parcela)* 1.10
+    alert(`o valor de cada percela é de R$ ${valor}`)
+    if(valor> 1000){
+        const pergunta= prompt('deseja aumentar o numero de parcela(s-não n-não)')
+        if(pergunta == 's'){
+            const pergunta= Number(prompt('qual a nova quantidade que deseja adicionar'))
+            valor = ((veiculo - entrada)/(parcela+pergunta))*1.10
+            alert(`o novo valor de cada parcela é de R$ ${valor}`)
+        }else if(pergunta == 'n'){
+            alert(`o valor da parcela continua sendo R$ ${valor}`)
+        }
+        else{
+            alert('valor invalido')
+        }
+    }
+    else{
+        alert(`o valor foi menor que R$ 1000 então não havera aumentos`)
+    }
+}
 
 
     //Processamento

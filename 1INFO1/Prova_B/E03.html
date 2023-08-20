@@ -8,9 +8,39 @@
     */
     
     //Entrada
-
-
+const loja1=Number(prompt(`informe o preço do conjunto (carteira e cadeira) da loja 1`))
+const loja2=Number(prompt(`informe o preço do conjunto (carteira e cadeira) da loja 2`))
+const loja3=Number(prompt(`informe o preço do conjunto (carteira e cadeira) da loja 3`))
+const cadeira = parseInt(prompt(`informe a quantidade de cadeiras que deseja comprar`))
+const carteira = parseInt(prompt(`informe a quantidade de carteria que deseja comprar`))
+let calculo1= 0
+let calculo2 = 0
+let calculo3 = 0
     //Processamento
+if(cadeira + carteira > 80 && carteira + cadeira <= 100){
+        calculo1= (cadeira + cadeira) * loja1
+        calculo2= (cadeira + cadeira) * loja2
+        calculo3= (cadeira + cadeira) * loja3
+        alert(`o preço do conjunto na loja 1 é de R$ ${calculo1}`)
+        alert(`o preço do conjunto na loja 2 é de R$ ${calculo2}`)
+        alert(`o preço do conjunto na loja 3 é de R$ ${calculo3}`)
+        alert(`foram doados 5 conjuntos totalizando ${(cadeira+carteira)-5}`)
+}
+else if(cadeira + carteira > 100){
+    calculo1= (cadeira + cadeira) * loja1
+    calculo2= (cadeira + cadeira) * loja2
+     calculo3= (cadeira + cadeira) * loja3
+        alert(`o preço do conjunto na loja 1 é de R$ ${calculo1}`)
+        alert(`o preço do conjunto na loja 2 é de R$ ${calculo2}`)
+        alert(`o preço do conjunto na loja 3 é de R$ ${calculo3}`)
+        alert(`foram doados 10 conjuntos totalizando ${(cadeira+carteira)-10}`)
+}
+else{
+    calculo1= (cadeira + cadeira) * loja1
+     calculo2= (cadeira + cadeira) * loja2
+     calculo3= (cadeira + cadeira) * loja3
+     alert(`não foram doados conjuntos`)
+}
 
 
     //Saída

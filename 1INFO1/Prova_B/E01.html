@@ -9,9 +9,38 @@
     */
     
     //Entrada
-
+const comp= parseInt(prompt(`quantos computadores deseja comprar`))
+const pagamento = prompt(`voce pagara em dinheiro?`)
+let calculo = 0
 
     //Processamento
+if(comp < 5 && pagamento == `n`){
+    calculo = comp * 1500
+    alert(`o valor do seu pc é de  R$ ${calculo}`)
+}
+else if(comp < 5 && pagamento == `s`){
+    calculo = (comp * 1500) - (comp * 1500)*0.05
+    alert(`voce recebeu um desconto de 5% e o novo valor é de R$ ${calculo}`)
+}
+else if(comp >= 5 && comp < 10 && pagamento == `n`){
+    calculo = (comp * 1500) -  (comp * 1500)*0.10
+    alert(`voce recebeu um desconto de 10% e seu novo valor é de R$ ${calculo}`)
+}
+else if(comp >= 5 && comp < 10 && pagamento == `s`){
+    calculo = (comp * 1500) -  (comp * 1500)*0.15
+    alert(`voce recebeu um desconto de 15% e seu novo valor é de R$ ${calculo}`)
+}
+else if(comp >= 10 && pagamento == `n`){
+    calculo = (comp * 1500) -  (comp * 1500)*0.15
+    alert(`voce recebeu um desconto de 15% e seu novo valor é de R$ ${calculo}`)
+}
+else if(comp >= 10 && pagamento == `s`){
+    calculo = (comp * 1500) -  (comp * 1500)*0.20
+    alert(`voce recebeu um desconto de 20% e seu novo valor é de R$ ${calculo}`)
+}
+else{
+    alert(`valor invalido`)
+}
 
 
     //Saída

@@ -9,7 +9,19 @@
     */
     
     //Entrada
+const consumo = Number(prompt(`informe a quantidade de litros de agua que é cosumido em sua residencia`))
+const pessoa = parseInt(prompt(`informe a quantidade de pessoas que residem na sua casa`))
+let calculo = consumo/pessoa
 
+if(calculo >= 300 && calculo <= 500){
+    alert(`a residencia sera penalizada em 15% na tarifa de agua`)
+}
+else if(calculo > 500){
+    alert(`a residencia sera penalizada em 30% na tarifa de agua`)
+}
+else{
+    alert(`parabens pelo consumo eficiente`)
+}
 
     //Processamento
 
